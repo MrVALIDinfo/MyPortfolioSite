@@ -1,4 +1,4 @@
-link https://mrvalidinfo.github.io/MyPortfolioSite/#about
+link https://mrvalidinfo.github.io/MyPortfolioSite/
 ---
 
 ```markdown
