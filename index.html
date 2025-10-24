@@ -1,71 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio of Eldiyar">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Eldiyar Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Personal portfolio of Eldiyar" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="dark">
 
-  <!-- HEADER -->
-  <header>
-    <h1>Eldiyar</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header id="siteHeader">
+    <div class="header-inner">
+      <h1 class="site-title">Eldiyar</h1>
+
+      <!-- Burger -->
+      <button id="burger" class="burger" aria-expanded="false" aria-label="Открыть меню">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Nav -->
+      <nav id="nav" class="nav" aria-label="Главная навигация">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <button id="theme-toggle" class="btn-theme" aria-pressed="false" title="Сменить тему">🌗</button>
+      </nav>
+    </div>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="images/e4ff08f777c11971a1e5fe364eb03eb6.jpg" alt="Eldiyar" class="profile-pic">
-      <p>Hello! I'm Eldiyar, a passionate developer exploring modern web technologies. I enjoy building interactive websites and learning new skills every day.</p>
-    </div>
-  </section>
+  <main>
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <div class="about-container">
+        <img src="images/e4ff08f777c11971a1e5fe364eb03eb6.jpg" alt="Eldiyar" class="profile-pic" />
+        <div class="about-text">
+          <p>Hello! I'm Eldiyar, a passionate developer exploring modern web technologies. I enjoy building interactive websites and learning new skills every day.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <article class="project-card">
-        <img src="images/31e84f7c604c3dee30c5a490be04278e.jpg" alt="Project 1">
-        <h3>Project 1</h3>
-        <p>Short description of project 1.</p>
-        <p>Tech: HTML, CSS, JS</p>
-        <a href="#" target="_blank">Live</a> | <a href="#" target="_blank">GitHub</a>
-      </article>
-      <article class="project-card">
-        <img src="images/46b9344a2a361ef32757ee545585ed0a.jpg" alt="Project 2">
-        <h3>Project 2</h3>
-        <p>Short description of project 2.</p>
-        <p>Tech: HTML, CSS, JS</p>
-        <a href="#" target="_blank">Live</a> | <a href="#" target="_blank">GitHub</a>
-      </article>
-      <article class="project-card">
-        <img src="images/e4ff08f777c11971a1e5fe364eb03eb6.jpg" alt="Project 3">
-        <h3>Project 3</h3>
-        <p>Short description of project 3.</p>
-        <p>Tech: HTML, CSS, JS</p>
-        <a href="#" target="_blank">Live</a> | <a href="#" target="_blank">GitHub</a>
-      </article>
-    </div>
-  </section>
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <article class="project-card">
+          <figure class="proj-media">
+            <img src="images/31e84f7c604c3dee30c5a490be04278e.jpg" alt="Project 1 screenshot" />
+          </figure>
+          <h3>Project 1</h3>
+          <p class="proj-desc">Short description of project 1.</p>
+          <p class="tech">Tech: HTML, CSS, JS</p>
+          <div class="proj-links"><a href="#" target="_blank" rel="noopener">Live</a> | <a href="#" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:eldiyar@example.com">eldiyar@example.com</a></p>
-    <p>GitHub: <a href="https://github.com/MrVALIDinfo" target="_blank">github.com/eldiyar</a></p>
-  </section>
+        <article class="project-card">
+          <figure class="proj-media">
+            <img src="images/46b9344a2a361ef32757ee545585ed0a.jpg" alt="Project 2 screenshot" />
+          </figure>
+          <h3>Project 2</h3>
+          <p class="proj-desc">Short description of project 2.</p>
+          <p class="tech">Tech: HTML, CSS, JS</p>
+          <div class="proj-links"><a href="#" target="_blank" rel="noopener">Live</a> | <a href="#" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+
+        <article class="project-card">
+          <figure class="proj-media">
+            <img src="images/e4ff08f777c11971a1e5fe364eb03eb6.jpg" alt="Project 3 screenshot" />
+          </figure>
+          <h3>Project 3</h3>
+          <p class="proj-desc">Short description of project 3.</p>
+          <p class="tech">Tech: HTML, CSS, JS</p>
+          <div class="proj-links"><a href="#" target="_blank" rel="noopener">Live</a> | <a href="#" target="_blank" rel="noopener">GitHub</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:eldiyar@example.com">eldiyar@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/MrVALIDinfo" target="_blank" rel="noopener">github.com/MrVALIDinfo</a></p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Eldiyar. All rights reserved.</p>
   </footer>
+
+  <!-- scroll to top -->
+  <button id="scrollTopBtn" aria-label="Наверх">⬆</button>
 
   <script src="script.js"></script>
 </body>
